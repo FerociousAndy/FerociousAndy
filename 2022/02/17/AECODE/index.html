@@ -149,8 +149,7 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <h1 id="AE-Code-Learning"><a href="#AE-Code-Learning" class="headerlink" title="AE Code Learning~"></a>AE Code Learning~</h1><p>写表达式时注意输入法的中英文字符和符号的使用，包括  () ‘’  ,  等英文符号。备注：内容不跟随视频内容，表达式后面的大写单词只是代表数值和缩写无关。</p>
-<p><strong>1.</strong></p>
-<ul>
+<h2 id="1"><a href="#1" class="headerlink" title="1."></a><strong>1.</strong></h2><ul>
 <li><p>time<em>N 一般应用角度和度数相关。例如time</em>120：每秒钟物体旋转n=120度。</p>
 </li>
 <li><p>time*(N/M)表示每M秒旋转N度，可以用来降低旋转速度。</p>
@@ -169,8 +168,7 @@
 <p>​           posterzetime（3）；time*（500/10）表示10秒跳500个单位距离，每秒跳3步，共需要30步。</p>
 <p><strong>如果是R的属性下表示的则是旋转度数的跳动变化。</strong></p>
 <p>如果你的元素没有完成指定的N的行为，请检查自己时间是不是符合M的范围</p>
-<p><strong>2.</strong></p>
-<p>常用 wiggle(N,M)  N表示每秒震动频率，震动的次数，M 表示每次震动时偏离原位置的像素值或振幅 amplitude。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2."></a><strong>2.</strong></h2><p>常用 wiggle(N,M)  N表示每秒震动频率，震动的次数，M 表示每次震动时偏离原位置的像素值或振幅 amplitude。</p>
 <p>wiggle(10,5)表示该属性下的元素每秒震动10次，每次偏离5个点之间（+5到-5）。</p>
 <p>wiggle(freq, amp, octaves = 1, amp_mult = .5, t = time)</p>
 <p>freq：振频，即每秒抖动次数 ,没有默认值，必须传参</p>
@@ -182,8 +180,7 @@
 <p>等比的变化：</p>
 <p>s=wiggle(N,M)[0];[s,s] 次数s是附值，可以使用其他的参数代替，保证s后面的[s,s]是同一个字符。</p>
 <p>其中[0],0为第一个数组，1为第二个数组（具体可以参考链接：<a target="_blank" rel="noopener" href="http://www.video7cg.com/26201.html%EF%BC%89">http://www.video7cg.com/26201.html）</a></p>
-<p><strong>3.</strong></p>
-<p>loopin(“style”,N)；loopout(“style”,N)  一般用在位置相关的地方，style包括cycle/pingpong/continue/offset，N可以等于0，但是小于关键帧总数。looping和loopout默认的样式可以参照属性里面的格式。</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3."></a><strong>3.</strong></h2><p>loopin(“style”,N)；loopout(“style”,N)  一般用在位置相关的地方，style包括cycle/pingpong/continue/offset，N可以等于0，但是小于关键帧总数。looping和loopout默认的样式可以参照属性里面的格式。</p>
 <p>loopin表示保持style运动在关键帧前进行运动。</p>
 <p>loopout表示保持style运动在关键帧后进行运动。</p>
 <p>cycle表示循环运动</p>
@@ -191,16 +188,14 @@
 <p>offset表示按照N的方式延续运动下去</p>
 <p>0的时候，表示所有关键帧循环；1的时候，表示只循环最后两帧；以此类推。</p>
 <p>continue表示在保持最后一帧的运动方式继续运动下去，备注continue不存在后面N的参数，会报错。</p>
-<p><strong>4.</strong></p>
-<p>value </p>
+<h2 id="4"><a href="#4" class="headerlink" title="4."></a><strong>4.</strong></h2><p>value </p>
 <p>value+N：P的位置分离单一的属性中，首先现有位移关键帧动画，这个表示的是在原有关键帧位移上面有N的偏移，N为正数，x轴偏右，y轴偏下；N为负数，x轴偏左，y轴偏上，偏移值为N的绝对值的单位数。</p>
 <p>valueAtTime</p>
 <p>位置延迟跟随，第一个元素跟随第二个元素，创建连接，会在元素二创建表达式前缀入：thisComp.layer(“第一个元素”).transform.yPosition    第一个元素为元素名称，y为所连接的轴向。</p>
 <p>thisComp.layer(“第一个元素”).transform.yPosition.valueAtTime(time-N)</p>
 <p>-N表示第二个元素在第一个后面出现，时间为第一个元素运动N秒推迟后，才开始运动。</p>
 <p>如果为+N则会出现在第一个元素上面。</p>
-<p><strong>5.数字随着物体位置移动产生对应的变化，文本position位置属性链接/速度属性</strong></p>
-<p><strong>position[0]/positon[1]/.speed/.speed.fixto[N]</strong></p>
+<h2 id="5-数字随着物体位置移动产生对应的变化，文本position位置属性链接-速度属性"><a href="#5-数字随着物体位置移动产生对应的变化，文本position位置属性链接-速度属性" class="headerlink" title="5.数字随着物体位置移动产生对应的变化，文本position位置属性链接/速度属性"></a><strong>5.数字随着物体位置移动产生对应的变化，文本position位置属性链接/速度属性</strong></h2><p><strong>position[0]/positon[1]/.speed/.speed.fixto[N]</strong></p>
 <p>将数字的source源文本 进行表达式，并且将链接到某物体的位置属性上，自动产生表达式链接。</p>
 <p>如：thisComp.layer(“物体名称”).transform.position[0]  </p>
 <p>备注个人理解：0表示非正常显示的状态，似乎只支持0和1的数字。</p>
@@ -218,8 +213,7 @@
 <p>例如thisComp.layer(“物体名称”).transform.position.velocity[1]              并且文本显示0.113216543</p>
 <p>则为：该物体在此时刻上的y轴速度值为0.113216543</p>
 <p>并且会存在负数值，比如.velocity[1]  -013，物体y轴向上移动为负数值，若改为正数值，如：.velocity[1]*-1,则会变为正值，并且一个-1可以作用于三个xyz轴的负值。</p>
-<p><strong>6.线性表达式</strong></p>
-<p><strong>linear线性</strong></p>
+<h2 id="6-线性表达式"><a href="#6-线性表达式" class="headerlink" title="6.线性表达式"></a><strong>6.线性表达式</strong></h2><p><strong>linear线性</strong></p>
 <p>linear(t, Min, Max, value1, value2)表示（个人理解）：</p>
 <p>time关键帧的时间</p>
 <p>如果完成整个运动从value1到value2的位置value数值所需要走的步数</p>
@@ -235,8 +229,7 @@
 <p>linear(t, value1, value2)表示当time在0到1之间时，从value1变化到value2；</p>
 <p>视频中说其他包括easeIn easeOut 等的用户只需要替换linear就可以了，并且注意大写的I和O字母，输入会报错，注意自己的最后的括号。</p>
 <p><img src="/2022/02/17/AECODE/1626100655023-c255a4a1-ba59-4415-895f-4715ce533677-16396710924053.png" alt="open linear">++</p>
-<p><strong>6.LoopIn/loopOut</strong></p>
-<p><img src="/2022/02/17/AECODE/1621480893570-a16830ec-f18c-46d1-84dd-b62aabe53a7d-16396710924055.png" alt="view the video"></p>
+<h2 id="7-LoopIn-loopOut"><a href="#7-LoopIn-loopOut" class="headerlink" title="7.LoopIn/loopOut"></a><strong>7.LoopIn/loopOut</strong></h2><p><img src="/2022/02/17/AECODE/1621480893570-a16830ec-f18c-46d1-84dd-b62aabe53a7d-16396710924055.png" alt="view the video"></p>
 <p>油管视频推荐：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XRrs9pvWGuY&amp;list=RDCMUCbfz_keteqaKbpiRiS95Dqg&amp;start_radio=1&amp;rv=XRrs9pvWGuY&amp;t=158&amp;ab_channel=AnimoplexAnimoplex">https://www.youtube.com/watch?v=XRrs9pvWGuY&amp;list=RDCMUCbfz_keteqaKbpiRiS95Dqg&amp;start_radio=1&amp;rv=XRrs9pvWGuY&amp;t=158&amp;ab_channel=AnimoplexAnimoplex</a></p>
 
             </div>
